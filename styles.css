@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+header, main {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+#home-title {
+    background-image: url("background.jpeg");
+    background-size: cover;
+    padding-top: 35%;
+}
+#academic-title {
+    height: 400px;
+    background-image: linear-gradient(45deg, #111447, blue);
+    position: relative;
+}
+#academic-title h1 {
+    padding-top: 250px;
+}
+header h1 {
+    color: #343deb;
+    text-shadow: 5px 5px 8px #2a2773;
+    font-size: 50px;
+    transition: 1s ease;
+}
+header h1:hover {
+    text-shadow: 7px 7px 8px blue;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    width: 100%;
+}
+nav a {
+    flex: 20%;
+    font-size: 15px;
+    background-color: #07081f;
+    color: white;
+    text-shadow: 2px 2px 8px white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s ease-in;
+}
+nav a:hover {
+    background-color: #111447;
+    font-size: 20px;
+}
+main div {
+    margin: 2.5% 20%;
+    padding: 1% 2.5%;
+    background-color: #e4e4f0;
+    box-shadow: 10px 10px #5752f7;
+    border-radius: 25px;
+    text-align: left;
+}
+main h1 {
+    text-decoration: underline;
+}
+blockquote {
+    display: none;
+    font-style: italic;
+    font-size: 20px;
+}
+blockquote::before, blockquote::after {
+    content: '"';
+    font-style: italic;
+}
+span {
+    text-shadow: 2px 2px 5px black;
+}
+span:hover {
+    cursor: pointer;
+}
+.book {
+    position: absolute;
+}
+.book:nth-child(1) {
+    top: 45px;
+    transform: rotate(34deg);
+    animation: move 2s linear infinite;
+}
+.book:nth-child(2) {
+    top: 150px;
+    transform: rotate(67deg);
+    animation: move 3s ease-in infinite;
+}
+.book:nth-child(3) {
+    top: 260px;
+    transform: rotate(-75deg);
+    animation: move 2.5s ease-in-out infinite;
+}
+.book:nth-child(4) {
+    top: 31px;
+    transform: rotate(34deg);
+    animation: move2 1s linear infinite;
+}
+
+.book:nth-child(5) {
+    top: 100px;
+    transform: rotate(67deg);
+    animation: move2 2.4s ease-in infinite;
+}
+.book:nth-child(6) {
+    top: 201px;
+    transform: rotate(-75deg);
+    animation: move2 1.52s ease-in-out infinite;
+}
+.book:nth-child(7) {
+    top: 24px;
+    transform: rotate(185deg);
+    animation: move3 2.1s linear infinite;
+}
+
+.book:nth-child(8) {
+    top: 104px;
+    transform: rotate(123deg);
+    animation: move3 3.4s ease-in infinite;
+}
+
+.book:nth-child(9) {
+    top: 230px;
+    transform: rotate(-7deg);
+    animation: move3 2.3s ease-in-out infinite;
+}
+.content {
+    border-radius: 0 5px 5px 0;
+    width: 50px;
+    height: 60px;
+    padding-top: 15px;
+    box-shadow: 1px 3px white;
+}
+.handle {
+    width: 15px;
+    height: 79px;
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: -12.5px;
+}
+.line {
+    height: 5px;
+    width: 40px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.red {
+    box-shadow: 6px 6px 6px red;
+}
+.red .content {
+    background-color: red;
+}
+.red .line {
+    background-color: #f75252;
+}
+.red .handle {
+    background-color: #d95050;
+}
+.blue {
+    box-shadow: 6px 6px 6px blue;
+}
+.blue .content {
+    background-color: blue;
+}
+
+.blue .line {
+    background-color: #5463eb;
+}
+
+.blue .handle {
+    background-color: #2734ab;
+}
+.green {
+    box-shadow: 6px 6px 6px green;
+}
+
+.green .content {
+    background-color: green;
+}
+
+.green .line {
+    background-color: #2fbf19;
+}
+
+.green .handle {
+    background-color: #4b9140;
+}
+@keyframes move {
+    0% {right: 50px;}
+    100% {right: 100%;}
+}
+@keyframes move2 {
+    0% {right: -20px;}
+    100% {right: 100%;}
+}
+@keyframes move3 {
+    0% {
+        right: 80px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+@keyframes move4 {
+    0% {
+        right: -60px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
