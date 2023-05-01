@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Russo+One&display=swap');
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -18,8 +18,19 @@ header, main {
     background-image: linear-gradient(45deg, #111447, blue);
     position: relative;
 }
+#cca-title {
+    height: 400px;
+    background-color: black;
+    width: 100%;
+    position: relative;
+    z-index: -3;
+}
 #academic-title h1 {
     padding-top: 250px;
+}
+#cca-title h1 {
+    padding-top: 300px;
+    text-align: center;
 }
 header h1 {
     color: #343deb;
@@ -215,4 +226,55 @@ span:hover {
     100% {
         right: 100%;
     }
+}
+.bg-code {
+    font-size: 30px;
+    position: absolute;
+    z-index: -1; 
+    top: 0px;
+    left: 5px;
+    color: white;
+    animation: code 2s linear infinite;
+}
+.bg-code:nth-child(2n-1) {
+    color: white;
+    text-shadow: 2px 2px 8px white;
+    font-family: 'Russo One', sans-serif;
+}
+.bg-code:nth-child(2n) {
+    color: green;
+    text-shadow: 2px 2px 8px green;
+    font-family: 'Russo One', sans-serif;
+}
+.bg-code:nth-child(2) {
+    top: 40px;
+    animation: code 3s linear infinite;
+}
+.bg-code:nth-child(3) {
+    top: 80px;
+    animation: code 1s linear infinite;
+}
+.bg-code:nth-child(4) {
+    top: 120px;
+    animation: code 2.4s linear infinite;
+}
+.bg-code:nth-child(5) {
+    top: 160px;
+    animation: code 1.5s linear infinite;
+}
+.bg-code:nth-child(6) {
+    top: 200px;
+    animation: code 3.5s linear infinite;
+}
+.bg-code:nth-child(7) {
+    top: 240px;
+    animation: code 5.4s linear infinite;
+}
+.bg-code:nth-child(8) {
+    top: 280px;
+    animation: code 0.5s linear infinite;
+}
+@keyframes code {
+    0% {left: 10px}
+    100% {left: 100%}
 }
