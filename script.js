@@ -9,16 +9,26 @@ function showQuote() {
         }
     }, 50);
 }
-setInterval(function() {
-    document.getElementsByClassName('bg-code')[Math.floor(Math.random() * document.getElementsByClassName("bg-code").length)].innerHTML += Math.floor(Math.random() * 2);
-    for (let i=0; i<document.getElementsByClassName("bg-code").length; i++) {
-        if (document.getElementsByClassName("bg-code")[i].clientWidth >= document.getElementById("cca-title").clientWidth) {
-            document.getElementsByClassName("bg-code")[i].innerHTML = "X".repeat(document.getElementsByClassName("bg-code")[i].innerHTML.length);
-            document.getElementsByClassName("bg-code")[i].style.opacity = 0.5;
-            setTimeout(function() {
-                document.getElementsByClassName("bg-code")[i].style.opacity = 1;
-                document.getElementsByClassName("bg-code")[i].innerHTML = "";
-            }, 100); 
-        } 
-    }
-}, 20);
+if (document.getElementsByClassName("bg-code").length != 0) {
+    setInterval(function() {
+        document.getElementsByClassName('bg-code')[Math.floor(Math.random() * document.getElementsByClassName("bg-code").length)].innerHTML += Math.floor(Math.random() * 2);
+        for (let i=0; i<document.getElementsByClassName("bg-code").length; i++) {
+            if (document.getElementsByClassName("bg-code")[i].clientWidth >= document.getElementById("cca-title").clientWidth) {
+                document.getElementsByClassName("bg-code")[i].innerHTML = "X".repeat(document.getElementsByClassName("bg-code")[i].innerHTML.length);
+                document.getElementsByClassName("bg-code")[i].style.opacity = 0.5;
+                setTimeout(function() {
+                    document.getElementsByClassName("bg-code")[i].style.opacity = 1;
+                    document.getElementsByClassName("bg-code")[i].innerHTML = "";
+                }, 100); 
+            } 
+        }
+    }, 20);
+} else if (document.getElementsByClassName("orb").length != 0) {
+    setInterval(function() {
+        let rainbow = ["red orb", "orange orb", "yellow orb", "green orb", "blue orb", "purple orb"];
+        let new_orb = document.getElementsByClassName(rainbow[Math.floor(Math.random() * 6)])[0].cloneNode;
+        document.getElementsByTagName("header")[0].appendChild(new_orb);
+        new_orb.style.display = "block";
+        new_orb.style.left = String(Math.random() * 400) + "px";
+    }, 20);
+}
