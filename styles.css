@@ -30,6 +30,7 @@ header, main {
     width: 100%;
     background-image: linear-gradient(black, #111447, white);
     position: relative;
+    z-index: -2;
 }
 #academic-title h1 {
     padding-top: 250px;
@@ -301,8 +302,9 @@ main img {
     position: absolute;
     box-shadow: none;
     bottom: 0px;
-    animation: float 2s linear infinite;
+    animation: float 1s linear infinite;
     display: none;
+    z-index: -1;
 }
 .red.orb {
     border-color: #ff6969;

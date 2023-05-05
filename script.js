@@ -26,9 +26,13 @@ if (document.getElementsByClassName("bg-code").length != 0) {
 } else if (document.getElementsByClassName("orb").length != 0) {
     setInterval(function() {
         let rainbow = ["red orb", "orange orb", "yellow orb", "green orb", "blue orb", "purple orb"];
-        let new_orb = document.getElementsByClassName(rainbow[Math.floor(Math.random() * 6)])[0].cloneNode;
-        document.getElementsByTagName("header")[0].appendChild(new_orb);
-        new_orb.style.display = "block";
-        new_orb.style.left = String(Math.random() * 400) + "px";
-    }, 20);
+        if (document.getElementsByClassName("orb").length < 15) {
+            let new_orb = document.createElement("span");
+            new_orb.style.display = "block";
+            new_orb.style.left = String(Math.random() * 100) + "%";
+            new_orb.className = rainbow[Math.floor(Math.random() * 6)]
+            document.getElementsByTagName("header")[0].appendChild(new_orb);
+        }
+        document.getElementsByClassName("orb")[Math.floor(Math.random() * document.getElementsByClassName("orb").length)].style.left = String(Math.random() * 100) + "%";
+    }, 100);
 }
