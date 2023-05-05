@@ -305,6 +305,7 @@ main img {
     animation: float 1s linear infinite;
     display: none;
     z-index: -1;
+    transition: 1s linear;
 }
 .red.orb {
     border-color: #ff6969;

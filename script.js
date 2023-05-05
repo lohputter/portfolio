@@ -29,10 +29,11 @@ if (document.getElementsByClassName("bg-code").length != 0) {
         if (document.getElementsByClassName("orb").length < 15) {
             let new_orb = document.createElement("span");
             new_orb.style.display = "block";
-            new_orb.style.left = String(Math.random() * 100) + "%";
-            new_orb.className = rainbow[Math.floor(Math.random() * 6)]
+            new_orb.style.left = String((Math.random() * 85) + 15) + "%";
+            new_orb.className = rainbow[Math.floor(Math.random() * 6)];
             document.getElementsByTagName("header")[0].appendChild(new_orb);
         }
-        document.getElementsByClassName("orb")[Math.floor(Math.random() * document.getElementsByClassName("orb").length)].style.left = String(Math.random() * 100) + "%";
+        document.getElementsByClassName("orb")[Math.floor(Math.random() * document.getElementsByClassName("orb").length)].style.left = String((Math.random() * 80) + 15) + "%";
+        document.getElementsByClassName("orb")[Math.floor(Math.random() * document.getElementsByClassName("orb").length)].className = rainbow[Math.floor(Math.random() * 6)];
     }, 100);
 }
