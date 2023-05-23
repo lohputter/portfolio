@@ -11,7 +11,7 @@ header, main {
 #home-title {
     background-image: url("background.jpeg");
     background-size: cover;
-    padding-top: 35%;
+    padding-bottom: 35%;
 }
 #academic-title {
     height: 400px;
@@ -33,9 +33,9 @@ header, main {
     z-index: -2;
 }
 #milestone-title {
-    height: 400px;
     background-image: url("milestone.jpeg");
     background-size: cover;
+    padding-top: 35%;
 }
 #academic-title h1 {
     padding-top: 250px;
@@ -365,6 +365,18 @@ table td, table th {
 table th {
     text-decoration: underline;
 }
-ol li {
+li {
     line-height: 1.5rem;
+}
+a {
+    color: black;
+}
+a:hover {
+    cursor: pointer;
+    color: blue;
+}
+li img {
+    margin: 15px;
+    border-radius: 15px;
+    width: 70%;
 }
